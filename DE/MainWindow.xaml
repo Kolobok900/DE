@@ -1,0 +1,29 @@
+﻿<Window x:Class="DE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DE"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="850">
+    <Grid>
+        <DataGrid x:Name="userData" ColumnWidth="*" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False" Margin="0,56,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding RoleName}" Header="Роль"/>
+                <DataGridTextColumn Binding="{Binding FirstName}" Header="Фамилия"/>
+                <DataGridTextColumn Binding="{Binding LastName}" Header="Имя"/>
+                <DataGridTextColumn Binding="{Binding Surname}" Header="Отчество"/>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль"/>
+                <DataGridTextColumn Binding="{Binding ManagerId}" Header="Менеджер"/>
+                <DataGridTextColumn Binding="{Binding DepartmentName}" Header="Отдел"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="searchButton" Content="Искать" HorizontalAlignment="Left" Margin="676,31,0,0" VerticalAlignment="Top" Height="20" Width="114" Click="searchButton_Click"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" Height="20"/>
+        <TextBlock x:Name="authUser" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="юзер" VerticalAlignment="Top" Height="16" Width="693"/>
+        <ComboBox x:Name="filterBox1" HorizontalAlignment="Left" Margin="414,31,0,0" VerticalAlignment="Top" Width="123" Height="20"/>
+        <ComboBox x:Name="filterBox2" HorizontalAlignment="Left" Margin="548,31,0,0" VerticalAlignment="Top" Width="123" Height="20"/>
+    </Grid>
+</Window>
